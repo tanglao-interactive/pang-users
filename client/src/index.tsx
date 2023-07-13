@@ -1,15 +1,81 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './components/App';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
+import Dashboard from './components/Dashboard';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <App>
+        <LoginPage />
+      </App>
+    ),
+  },
+  {
+    path: "/sign-up",
+    element: (
+      <App>
+        <SignupPage />
+      </App>
+    ),
+  },
+  {
+    path: "/reset-password",
+    element: (
+      <App>
+        <ResetPasswordPage />
+      </App>
+    ),
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <Dashboard>
+        <div>Dashboard</div>
+      </Dashboard>
+    ),
+  },
+  {
+    path: "/dashboard/users",
+    element: (
+      <Dashboard>
+        <div>Users</div>
+      </Dashboard>
+    ),
+  },
+  {
+    path: "/dashboard/subscriptions",
+    element: (
+      <Dashboard>
+        <div>Subscriptions</div>
+      </Dashboard>
+    ),
+  },  
+  {
+    path: "/dashboard/pang-members",
+    element: (
+      <Dashboard>
+        <div>Members</div>
+      </Dashboard>
+    ),
+  },
+]);
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
