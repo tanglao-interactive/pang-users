@@ -42,6 +42,30 @@ const router = createBrowserRouter([
       </Dashboard>
     ),
   },
+  {
+    path: "/dashboard/users",
+    element: (
+      <Dashboard>
+        <div>Users</div>
+      </Dashboard>
+    ),
+  },
+  {
+    path: "/dashboard/subscriptions",
+    element: (
+      <Dashboard>
+        <div>Subscriptions</div>
+      </Dashboard>
+    ),
+  },  
+  {
+    path: "/dashboard/pang-members",
+    element: (
+      <Dashboard>
+        <div>Members</div>
+      </Dashboard>
+    ),
+  },
 ]);
 
 
