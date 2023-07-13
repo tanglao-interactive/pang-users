@@ -52,6 +52,21 @@ export default function CustomDrawer() {
           </ListItem>
         ))}
       </List>
+      <Divider />
+      <ListItem>
+        <Typography variant="h6">Profile</Typography>
+      </ListItem>
+      <List>
+        {[
+          {text: "Logout", link: "/"},
+        ].map(({text, link}, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton onClick={() => navigate(link)} selected={link === location.pathname}>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+        </List>
     </div>
   );
 }
