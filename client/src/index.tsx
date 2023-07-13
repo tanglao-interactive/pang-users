@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
+import App from './components/App';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import Dashboard from './components/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
       <App>
         <ResetPasswordPage />
       </App>
+    ),
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <Dashboard>
+        <div>Dashboard</div>
+      </Dashboard>
     ),
   },
 ]);

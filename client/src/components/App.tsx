@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import 'src/styles/App.css';
 
 function App(props: any) {
   const { children } = props

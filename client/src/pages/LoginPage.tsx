@@ -34,7 +34,10 @@ const resolver: Resolver<LoginValues> = async (values: LoginValues) => {
 const LoginPage = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm<LoginValues>({ resolver });
-  const onSubmit = handleSubmit((data) => console.log('data', data));
+  const onSubmit = handleSubmit((data) => {
+    console.log('data', data);
+    navigate('/dashboard');
+  });
   const errorMessages = Object.entries(errors).map(([type, error]) => <div key={type}>{error.message}</div>);
 
   return (
