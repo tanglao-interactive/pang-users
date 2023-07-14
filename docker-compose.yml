@@ -15,3 +15,10 @@ services:
             - node_modules/
         - action: rebuild
           path: ./client/package.json
+
+  cognito:
+    image: jagregory/cognito-local:latest
+    volumes:
+      - $PWD/.cognito:/app/.cognito
+    ports:
+      - 9229:9229
