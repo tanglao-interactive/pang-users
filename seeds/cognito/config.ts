@@ -1,5 +1,5 @@
 const cognito_config = {
-  develop: {
+  local: {
     region: 'us-west-2',
     endpoint: 'http://localhost:9229',
     PoolName: 'pang-user-cognito-local',
