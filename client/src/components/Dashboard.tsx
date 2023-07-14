@@ -2,7 +2,6 @@ import { Box, Drawer } from '@mui/material';
 import React from 'react';
 import 'src/styles/App.css';
 import CustomDrawer from './CustomDrawer';
-import FooterNavigation from './FooterNavigation';
 
 function Dashboard(props: any) {
   const { children } = props
@@ -35,7 +34,6 @@ function Dashboard(props: any) {
           <Box sx={{ flexGrow: 4, p: 3 }}>
             {children}
           </Box>
-          <FooterNavigation />
         </Box>
       </Box>      
     </div>

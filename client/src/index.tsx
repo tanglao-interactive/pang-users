@@ -43,21 +43,13 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/dashboard/users",
+    path: "/dashboard/tracker",
     element: (
       <Dashboard>
-        <div>Users</div>
+        <div>Tracker</div>
       </Dashboard>
     ),
   },
-  {
-    path: "/dashboard/subscriptions",
-    element: (
-      <Dashboard>
-        <div>Subscriptions</div>
-      </Dashboard>
-    ),
-  },  
   {
     path: "/dashboard/pang-members",
     element: (

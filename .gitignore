@@ -131,3 +131,6 @@ dist
 
 # AWS mock
 .cognito
+
+# Environment variables
+.env

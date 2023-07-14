@@ -3,12 +3,9 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemIcon,
   ListItemText,
   Typography,
 } from "@mui/material";
-import PasswordIcon from "@mui/icons-material/Password";
-import LogoutIcon from "@mui/icons-material/Logout";
 import {useLocation, useNavigate} from "react-router-dom";
 
 export default function CustomDrawer() {
@@ -27,23 +24,7 @@ export default function CustomDrawer() {
       <List>
         {[
           {text: "Dashboard", link: "/dashboard"},
-          {text: "Users", link: "/dashboard/users"},
-          {text: "Subscriptions", link: "/dashboard/subscriptions"},
-        ].map(({text, link}, index) => (
-          <ListItem key={index} disablePadding>
-            <ListItemButton onClick={() => navigate(link)} selected={link === location.pathname}>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <ListItem>
-        <Typography variant="h6">Apps</Typography>
-      </ListItem>
-      <List>
-        {[
-          {text: "Apps", link: "/dashboard/pang-members"},
+          {text: "Tracker", link: "/dashboard/tracker"},
         ].map(({text, link}, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton onClick={() => navigate(link)} selected={link === location.pathname}>
